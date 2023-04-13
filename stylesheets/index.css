@@ -1,0 +1,142 @@
+/* body{
+    background-image: url(../images/Background-colours.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+} */
+.formbox{
+    width: 25%;
+   /* display: none; */
+    list-style: none;
+    position: absolute;
+    right: 20px;
+    margin-top: 50px;
+  
+}
+.ulform{
+    background-image: url(../images/background.jpg);
+}
+.ulform li{
+    list-style: none;
+    margin: 15px;
+    
+}
+.otpshow{
+    border: 1px solid;
+    /* height: 30px; */
+    width: 150px;
+    text-align: center;
+    border-radius: 12px;
+    margin-left: 29%;
+}
+.logbtn{
+    margin-left: 43%;
+}
+.logname{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 29%;
+    color: bisque;
+}
+.otpnum{
+width: 100px;
+height: 30px;
+border: 2px solid;
+color: white;
+border-radius: 15px;
+text-align: center;
+margin: 10px;
+margin-left: 39%;
+display: none;
+
+}
+.refresh{
+    color: beige;
+    position: absolute;
+    top: 220px;
+    left: 270px;
+    display: none;
+}
+.logoname{
+    color: bisque;
+    margin-left: 10px;
+    font-size: 29px;
+    font-weight: bolder;
+    margin-top: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.fpage {
+   
+    margin-left: 80px;
+    color: aqua;
+    font-size: 19px;
+    text-decoration: none;
+
+}
+.fpage a :hover{
+    cursor: pointer;
+
+}
+.sfpage{
+    margin-left: 25%;
+}
+.hidelog{
+    color: white;
+    font-size: 29px;
+    position: relative;
+    left: 95%;
+    top:-10px;
+    cursor: pointer;
+    
+}
+.newaccount{
+    color: yellow;
+    margin-left: 50px;
+}
+
+.fgtpage{
+    margin-left: 100px;
+    font-size: 22px;
+    color: azure;
+   text-decoration: none;
+}
+.fgtpage:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.signup:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+.signup{
+    text-decoration: none;
+    color: aquamarine;
+    font-weight: bolder;
+}
+.lsbtn{
+    color:azure
+}
+.searchbtn{
+    margin-right:150px ;
+    padding: 20px;
+}
+.bag{
+    color: aquamarine;
+    font-size: 29px;
+    margin-right: 20px;
+}
+.otperror{
+    color:white;
+    display: none;
+}
+.errorap{
+    color: beige;
+    display: none;
+}
+
+#successMsg{
+    color: green;
+    font-size: 19px;
+    display: none;
+}

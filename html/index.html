@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GoTrends App</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="../jquery.js"></script>
+    
+    <script src="../javascripts/amazonproduct.js"></script>
+    <script src="../javascripts/otpgen.js"></script>
+    <script src="../javascripts/newUserSignup.js"></script>
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- <!navbar!> -->
+    <header>
+     
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logo/GoLogo.png" alt="Bootstrap" width="70" height="48"><span class="logoname">Trends...</span>
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Category</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Brands
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex searchbtn" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div>
+                    <svg class="bag" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-bag " viewBox="0 0 16 16">
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                      </svg>
+                </div>
+                <div class="lsbtn me-5">
+                    <span class=" showlog btn btn-warning" >Login</span>
+                    <span class="btn btn-warning" onclick="newonloadPage('signup')">Sign Up</span>
+                </div>
+               
+
+              </div>
+            </div>
+          </nav>
+    </header>
+    <!-- Main? -->
+    
+  <main class="main">
+
+ 
+        <div class="formbox">
+            
+           
+        <ul class="form form-control ulform ">
+            <span class="hidelog">-</span>
+           
+            <span class="logname"> Login Page</span>
+           
+            <li>
+                <input type="text" class="form form-control accountuser" placeholder="Account Id / Phone no / Email id">
+            </li>
+            <li>
+                <input type="password" class="form form-control accountpass" placeholder="Account password" >
+            </li>
+            <li>
+                <span class="otperror">Inncorrect OTP..</span>
+                <input type="text" class="form-control otpbox" placeholder="Enter Here OTP" onkeyup="inputotp(event);">
+            </li>
+            <li>
+                <div class="otpnum"></div>
+                <span class="refresh">
+                    <a href="#" onclick="generateotp();">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                      </svg>
+                    </a>
+                </span>
+                <button class="otpshow btn btn-warning btn-outline-dark" onclick="generateotp();" >Generate OTP</button>
+            </li>
+            <li>
+              <span class="errorap">Invalid Account Id / Password....</span>
+            </li>
+            <li>
+                <button class="btn btn-primary btn-outline-dark logbtn" onclick="checkotp();" disabled>Login</button>
+            </li>
+            <li >
+                <span class="fgtpage" onclick="newonloadPage('forgot')">Forgot Password</span>
+            
+            </li>
+            <li class="fpage">
+                
+
+                <span class="newaccount" >Don't have an account :-</span>
+                <span class="signup" onclick="newonloadPage('signup')">  Sign up</span>
+                
+            </li>
+           
+           
+        </ul>
+ 
+</div>
+</main>
+    <!-- Footer? -->
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
